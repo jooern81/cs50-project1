@@ -1,0 +1,17 @@
+
+Ensure the following python libraries are installed:
+flask
+flask_session 
+sqlalchemy 
+sqlalchemy.orm 
+requests
+
+
+In the command prompt:
+Enter the directory of application.py
+
+set FLASK_APP=application.py
+
+set DATABASE_URL=postgres://bbilcrjmdqsefb:1792ea62a0f1684cafa24359decd4d31df2ac7f7a2bcf4bf9f86aad8254f5f2f@ec2-35-172-73-125.compute-1.amazonaws.com:5432/d6bt7imri7f5k9
+
+flask run
