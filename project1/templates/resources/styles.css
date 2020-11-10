@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #b9e4dc
+;
+}
+
+.topnav a {
+  float: left;
+  color: #996600;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ffcc66;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #996600;
+  color: white;
+}
+
+.gamenav {
+  background-color:black;
+  color: black
+}
+
+.gamenav a {
+  float: left;
+  color: blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}

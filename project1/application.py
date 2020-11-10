@@ -56,8 +56,8 @@ def index():
 def render_table(table_name):
     
     if request.method == 'GET':
-        cursor = connection.cursor() #print some of the newly added table's details
-        postgreSQL_select_Query = "select * from {}".format(table_name)
+        cursor = connection.cursor() # print some of the newly added table's details
+        postgreSQL_select_Query = "select * from {} where product = 'Ice Cream'".format(table_name)
         cursor.execute(postgreSQL_select_Query)
         table = cursor.fetchall()
         cursor.close()
