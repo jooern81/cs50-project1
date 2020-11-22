@@ -3,13 +3,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.topnav {
+.topNav {
   overflow: hidden;
-background-color: #008B8B;
+  background-color: #b9e4dc
 ;
 }
 
-.topnav a {
+.topNav a {
   float: left;
   color: #996600;
   text-align: center;
@@ -18,36 +18,41 @@ background-color: #008B8B;
   font-size: 17px;
 }
 
-.topnav a:active{
-  background-color: #2E8B57;
-  color: black;
-}
-
-.topnav a:hover {
+.topNav a:hover {
   background-color: #ffcc66;
   color: black;
 }
 
-.gamenav {
-  background-color: blue;
-  color: blue;
-}
-
-.gamenav a:hover {
-  background-color: #ffcc66;
-  color: black;
-}
-
-.gamenav a.active {
+.topnav a.active {
   background-color: #996600;
-  color: pink;
+  color: white;
 }
 
-.gamenav a {
+.gameNav {
+  background-color:black;
+  color: black
+}
+
+.gameNav a {
   float: left;
-  color: black;
-  text-align: center;
+  color: blue;
+  text-align: justify;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.taskNavImg {
+    float:left;
+    width: 60px;
+    height: 100%;
+}
+
+.graphContainer {
+    background-color: black;
+    color: black;
+}
+
+.middlePortion {
+    align-content: left;
 }

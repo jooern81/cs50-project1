@@ -7,40 +7,100 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>Project Supermarket</title>
     <link  href="resources/styles.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
+
 <body>
 
-<div class="topNav">
-    <a href=""><i class="material-icons" style="font-size:30px">menu</i></a>
+<div class="topNav col-xs-12">
+    <a href=""><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
     <a href=""><i class="material-icons" style="font-size:30px;float:right">person</i></a>
 </div>
 
-<div class="container" style="align-content:space-evenly">
-    <div class="col-xs-5">
-        <a href="#statistics" style="text-align:left">Warm Price Supermarket</a>
-        <a href="#news"style="text-align:right">Review Instructions</a>
-    </div>
-    <div>
-        <i class="material-icons" style="font-size:30px">|</i>
+
+<div class="gameNav col-sm-12">
+    <div class="gameNav col-sm-3">
+        <a href="#home">Warm Price Supermarket</a>
     </div>
 
-    <div class="col-xs-6">
-        <a href="#currentStanding">Current Standing</a>
-        <a href="#cash">Cash On Hand: $value</a>
-        <a href="#turn-number">Turn: $round</a>
-        <a href="#year">2020</a>
-        <a href="#quarter">$quarter</a>
-        <a href="#quantityValue">$qty</a>
+    <div class="middlePortion col-sm-6">
+        <a href="#news">Review Instructions</a>
+        <a href="#contact">Current Standing</a>
+    </div>
+
+    <div class="gameNav col-sm-3">
+        <a href="#about">Round 6-22</a>
     </div>
 </div>
 
-<div class="container">
-    
-                 
+
+<div class="row">
+    <div class="taskNav col-sm-4">
+
+        <div class="navButton" id="quarterlyReports">
+            <div id="imgQuartery">
+                <img class="taskNavImg" src="resources/images/report.png" alt="report">
+            </div>
+
+            <div id="wdsQuarterly col-xs-9">
+                <h3>Quarterly Reports</h3>
+                <h4>Review all previously generated quarterly reports</h4>
+            </div>
+        </div>
+
+        <div class="navButton" id="forecasts">
+            <div id="imgForecasts">
+                <img class="taskNavImg" src="resources/images/sales.png" alt="forecast">
+            </div>
+
+            <div id="wdsForecasts">
+                <h3>Forecasts</h3>
+                <h4>View demand forecasts made for each product</h4>
+            </div>
+        </div>
+
+        <div class="navButton" id="supplierQuotes">
+            <div id="imgSupplier">
+                <img class="taskNavImg" src="resources/images/bill.png" alt="invoice">
+            </div>
+
+            <div id="wdsSupplier">
+                <h3>Supplier Quotes</h3>
+                <h4>Unit, setup, and holding costs for SKUs this quarter</h4>
+            </div>
+        </div>
+
+        <div class="navButton" id="newsAndEvents">
+            <div id="imgNews">
+                <img class="taskNavImg" src="resources/images/newspaper.png" alt="news">
+            </div>
+
+            <div id="wdsNews">
+                <h3>News & Events</h3>
+                <h4>Read external news and internal announcements for this quarter</h4>
+            </div>
+        </div>
+
+        <div class="navButton" id="reviewAndRestock">
+            <div id="imgReview">
+                <img class="taskNavImg" src="resources/images/box.png" alt="restock">
+            </div>
+
+            <div id="wdsReview">
+                <h3>Review & Restock</h3>
+                <h4>Review inventory levels and update restock sheet</h4>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="graphContainer col-sm-8">
+        <h1>Graph and stuff will be here</h1>
+    </div>
+
 </div>
-            
+
 </body>
 </html>
 
