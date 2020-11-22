@@ -5,7 +5,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color: #b9e4dc
+background-color: #008B8B;
 ;
 }
 
@@ -18,24 +18,34 @@
   font-size: 17px;
 }
 
+.topnav a:active{
+  background-color: #2E8B57;
+  color: black;
+}
+
 .topnav a:hover {
   background-color: #ffcc66;
   color: black;
 }
 
-.topnav a.active {
-  background-color: #996600;
-  color: white;
+.gamenav {
+  background-color: blue;
+  color: blue;
 }
 
-.gamenav {
-  background-color:black;
-  color: black
+.gamenav a:hover {
+  background-color: #ffcc66;
+  color: black;
+}
+
+.gamenav a.active {
+  background-color: #996600;
+  color: pink;
 }
 
 .gamenav a {
   float: left;
-  color: blue;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
