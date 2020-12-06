@@ -42,12 +42,6 @@
   font-size: 17px;
 }
 
-.taskNavImg {
-    float:left;
-    width: 60px;
-    height: 100%;
-}
-
 .graphContainer {
     background-color: white;
     color: black;
@@ -55,4 +49,48 @@
 
 .middlePortion {
     align-content: left;
+}
+
+.taskNavImg {
+    float: center;
+    vertical-align: center;
+    height: 80%;
+    width: auto;
+}
+
+.navIcon{
+    border: 3px solid yellow;
+    text-align: center;
+    overflow: auto;
+    padding: 10pt;
+    height: 130px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.clearFix {
+    overflow: auto;
+    text-align: left;
+    border: 3px solid green;
+    vertical-align: middle;
+    height: 130px;
+    padding: 1%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.navButton {
+    border: 3px solid red;
+}
+
+.font1 {
+    font-family: "Arial";
+    font-weight: bold;
+    color: #2B7A78;
+}
+
+.font2 {
+    font-family: "Arial";
+    font-weight: normal;
+    color: #3AAFA9;
 }
