@@ -8,7 +8,6 @@ import requests
 from flask import Flask, render_template, redirect, url_for, request, flash
 import psycopg2
 
-
 #start a postgres database on heroku
 
 app = Flask(__name__)
@@ -86,10 +85,6 @@ def render_table(table_name):
     #     if (username or password) == '':
     #         error = 'Empty Username or Password. Please enter a Username and Password.'
 
-
-
-
-
 @app.route("/welcome")
 def welcome():
     render_template('welcome.html')
@@ -119,12 +114,8 @@ def login():
         
     return render_template('login.html', error=error)
 
-
 @app.route("/logout")
 def logout():
     session.clear()
     flash("Session Cleared. User Logged Out.") #it should be a message you want to see when the user makes the next request.
     return render_template('logout.html')
-
-
-

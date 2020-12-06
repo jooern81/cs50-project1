@@ -16,8 +16,8 @@
 <body>
 
 <div class="topNav col-xs-12">
-    <a href=""><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
-    <a href=""><i class="material-icons" style="font-size:30px;float:right">person</i></a>
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:left">new</i></a>
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:right">person</i></a>
 </div>
 
 
@@ -40,7 +40,7 @@
 <div class="row">
     <div class="taskNav col-sm-3">
 
-        <a href=""> 
+        <a href="">
             <div class="navIcon col-sm-3" id="imgQuartery">
                 <img class="taskNavImg" src="resources/images/report.png" alt="report">
             </div>
@@ -50,7 +50,7 @@
             </div>
         </a>
 
-        <a href=""> 
+        <a href="">
             <div class="navIcon col-sm-3" id="imgForecasts">
                 <img class="taskNavImg" src="resources/images/sales.png" alt="forecast">
             </div>
@@ -70,7 +70,7 @@
             </div>
         </a>
 
-        <a href=""> 
+        <a href="">
             <div class="navIcon col-sm-3" id="imgNews">
                 <img class="taskNavImg" src="resources/images/newspaper.png" alt="news">
             </div>
@@ -80,7 +80,7 @@
             </div>
         </a>
 
-        <a href=""> 
+        <a href="">
             <div class="navIcon col-sm-3" id="imgReview">
                 <img class="taskNavImg" src="resources/images/box.png" alt="restock">
             </div>
@@ -104,6 +104,26 @@
         </div>
         <div class="col-sm-12">
             <h1>Graph Stuff</h1>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">ISBN</th>
+                  <th scope="col">Title</th>
+                  <th scope="col">Author</th>
+                  <th scope="col">Year</th>
+                  <th scope="col">Star Rating</th>
+                </tr>
+              </thead>
+                {% for book in books %}
+                <tr>
+                <th scope="row">{{book.bookid}}</th>
+                <td>{{book.isbn}}
+                </td>
+                <td>{{book.title}}
+                </td>
+                <td>{{book.author}}
+                </td>
         </div>
 
     </div>
