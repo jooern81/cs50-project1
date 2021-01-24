@@ -110,27 +110,7 @@ White: #FFFFFF
             <h4 class="col-sm-4">Inventory Report</h4>
         </div>
         <div class="col-sm-12">
-            <h1>Graph Stuff</h1>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">ISBN</th>
-                  <th scope="col">Title</th>
-                  <th scope="col">Author</th>
-                  <th scope="col">Year</th>
-                  <th scope="col">Star Rating</th>
-                </tr>
-              </thead>
-                {% for book in books %}
-                <tr>
-                <th scope="row">{{book.bookid}}</th>
-                <td>{{book.isbn}}
-                </td>
-                <td>{{book.title}}
-                </td>
-                <td>{{book.author}}
-                </td>
+            {% include 'basedata_supplierquote_table.html' %}
         </div>
 
     </div>
