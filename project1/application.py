@@ -11,7 +11,7 @@ from jinja2 import Environment, FileSystemLoader, PackageLoader,Template
 
 # start a postgres database on heroku
 
-app = Flask(__name__, static_folder="../templates/resources")
+app = Flask(__name__)
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
@@ -115,7 +115,7 @@ def login():
     return render_template('login.html', error=error)
 
 
-@app.route("/tableformat")
+@app.route("/tableformat", methods=['GET', 'POST'])
 def render_table_details():
     cursor = connection.cursor()  # print some of the newly added table's details
     postgreSQL_select_Query = "select * from {} order by product".format("basedata_supplierquotes_table")
