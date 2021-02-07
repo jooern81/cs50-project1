@@ -6,39 +6,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>Project Supermarket</title>
-    <link  href="resources/styles.css" rel="stylesheet" type="text/css">
+    <link  href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
-    <div class="topNav col-xs-12">
-        <a href=""><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
-        <a href=""><i class="material-icons" style="font-size:30px;float:right">person</i></a>
+
+<div class="topNav col-xs-12">
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
+    <div class="middlePortion col-xs-10">
+        <a href="#home">Warm Price Supermarket</a>
+        <a href="#news">Review Instructions</a>
+        <a href="#contact">Current Standing</a>
+        <a href="#about">Round 6-22</a>
+    </div>
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:right">account_circle</i></a>
+</div>
+
+<div class="row" id="wrapper">
+    <div class= "col-sm-10">
+        <h3>Background</h3>
+        <p> You (or your group) are the new Procurement Manager of one of many supermarket chains in the city of Bufferville.
+            As the new manager in charge, you are tasked to make periodic but timely restocking decisions for the various products your supermarket carries.
+            Thanks to systems your predecessor had previously set up, a number of collaterals are prepared by the procurement team to aid your decision process.
+            <br><br> <strong> These include: </strong> </p>
+        <li> <strong> Annual demand forecasts </strong> modelled at the start of each fiscal year. </li>
+        <li> <strong> Supplier quotations </strong> which are made regularly and include respective holding costs.</li>
+        <li> <strong> News & events </strong> shortlist which summarises all news and events flagged as relevant and important to either product supply or demand by your colleagues. </li>
+        <li> <strong> Inventory Data </strong> which is generated in real time thanks to your supermarket's proprietary tracking system. </li>
+        <li> <strong> Historical data </strong> compiled on past performance, inventory levels, profitability, etc.</li>
+        <br><br>
+        <p>You may learn more about each of these report types in their respective tabs.
+        <br><br>
+        The above data, paired with Operations Management methodologies, will be critical for optimising the profitability of your supermarket.
+            You should remember that bad stocking decisions can lead to stockouts and missed sales.
+            At the end of your tenure, your the profitability performance of your supermarket will be ranked against that of other chains in the district.
+            Accordingly, rewards and consequences may follow.
+        <br><br>
+        Good luck, Manager </p>
     </div>
 
-
-    <div class="gameNav col-sm-12">
-        <div class="gameNav col-sm-3">
-            <a href="#home">Warm Price Supermarket</a>
-        </div>
-
-        <div class="middlePortion col-sm-6">
-            <a href="#news">Review Instructions</a>
-            <a href="#contact">Current Standing</a>
-        </div>
-
-        <div class="gameNav col-sm-3">
-            <a href="#about">Round 6-22</a>
-        </div>
+    <div class="designSideBar col-sm-2">
+        <img id="designSideBar" src="{{ url_for('static', filename='guide_and_rules/designBarSide.png') }}" alt="report">
     </div>
-
-    <div>
-            <div class= "rules" id= "rulebackground">
-                    <img class="rules" src="resources/guide_and_rules/Base Rules.png" alt="report">
-            </div>  
-    </div>
+</div>
 </body>
 
 </html>

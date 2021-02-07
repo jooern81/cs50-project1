@@ -32,26 +32,25 @@ White: #FFFFFF
     <a href="#addLink"><i class="material-icons" style="font-size:30px;float:right">account_circle</i></a>
 </div>
 
-<div class="row">
+<div class="row" id="wrapper">
     <div class="taskNav col-sm-3">
-
         <a href="#quarterlyreports" type="button">
             <div class="navIcon col-sm-3" id="imgQuarterly">
                 <img class="taskNavImg" src="{{ url_for('static', filename='images/report.png') }}" alt="report">
             </div>
             <div class = "clearFix col-sm-9" id="wdsQuarterly">
-                <h3 class="font1">Quarterly Reports</h3>
-                <h4 class="font2">Review all previously generated quarterly reports</h4>
+                <h4>Qtr' Reports</h4>
+                <h6>Review all previously generated quarterly reports</h6>
             </div>
         </a>
 
         <a href="#forecast" type="button">
             <div class="navIcon col-sm-3" id="imgForecasts">
-                <img src="{{ url_for('static', filename='images/sales.png') }}" alt="forecast">
+                <img class="taskNavImg" src="{{ url_for('static', filename='images/sales.png') }}" alt="forecast">
             </div>
             <div href="#quarterlyreport2" class="clearFix col-sm-9" id="wdsForecasts">
-                <h3>Forecasts</h3>
-                <h4>View demand forecasts made for each product</h4>
+                <h4>Forecasts</h4>
+                <h6>View demand forecasts made for each product</h6>
             </div>
         </a>
 
@@ -60,8 +59,8 @@ White: #FFFFFF
                 <img class="taskNavImg" src="{{ url_for('static', filename='images/bill.png') }}" alt="invoice">
             </div>
             <div class = "clearFix col-sm-9" id="wdsSupplier">
-                <h3>Supplier Quotes</h3>
-                <h4>Unit, setup, and holding costs for SKUs this quarter</h4>
+                <h4>Supplier Quotes</h4>
+                <h6>Unit, setup, and holding costs for SKUs this quarter</h6>
             </div>
         </a>
 
@@ -70,8 +69,8 @@ White: #FFFFFF
                 <img class="taskNavImg" src="{{ url_for('static', filename='images/newspaper.png') }}" alt="news">
             </div>
             <div class = "clearFix col-sm-9" id="wdsNews">
-                <h3>News & Events</h3>
-                <h4>News and announcements for the quarter</h4>
+                <h4>News & Events</h4>
+                <h6>News and announcements for the quarter</h6>
             </div>
         </a>
 
@@ -80,22 +79,22 @@ White: #FFFFFF
                 <img src="{{ url_for('static', filename='images/box.png') }}" class="taskNavImg" alt="restock">
             </div>
             <div class = "clearFix col-sm-9" id="wdsReview">
-                <h3>Review & Restock</h3>
-                <h4>Review inventory levels and update restock sheet</h4>
+                <h4>Review & Restock</h4>
+                <h6>Review inventory levels and update restock sheet</h6>
             </div>
         </a>
 
     </div>
 
-    <div class="graphContainer col-sm-8">
+    <div class="graphContainer col-sm-9">
         <div class="col-sm-6">
-            <h4>Select report to review</h4>
+            <h5 id="qtrReportView">Select report to review</h5>
         </div>
 
-        <div class="col-sm-6">
-            <h4 class="col-sm-4">Probability Report</h4>
-            <h4 class="col-sm-4">Sales Record</h4>
-            <h4 class="col-sm-4">Inventory Report</h4>
+        <div class="col-sm-6" id="qtrReportItems">
+            <h5 class="col-sm-4">Profitability</h5>
+            <h5 class="col-sm-4">Sales</h5>
+            <h5 class="col-sm-4">Inventory</h5>
         </div>
         <div class="col-sm-12">
             {% include 'basedata_supplierquote_table.html' %}

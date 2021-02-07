@@ -124,6 +124,10 @@ def render_table_details():
     cursor.close()
     return render_template("tableformat.html", output_data = data)
 
+@app.route("/review_instructions", methods=['GET', 'POST'])
+def review_instructions():
+    return render_template("review_instructions.html")
+
 @app.route("/logout")
 def logout():
     session.clear()
