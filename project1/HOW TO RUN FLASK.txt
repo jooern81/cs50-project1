@@ -1,4 +1,3 @@
-
 Ensure the following python libraries are installed:
 flask
 flask_session 
