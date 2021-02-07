@@ -7,11 +7,12 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 import requests
 from flask import Flask, render_template, redirect, url_for, request, flash
 import psycopg2
-from jinja2 import Environment, FileSystemLoader, PackageLoader,Template
+from jinja2 import Environment, FileSystemLoader, PackageLoader, Template
 
 # start a postgres database on heroku
 
 app = Flask(__name__)
+
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
     raise RuntimeError("DATABASE_URL is not set")
@@ -115,14 +116,15 @@ def login():
     return render_template('login.html', error=error)
 
 
-@app.route("/tableformat", methods=['GET', 'POST'])
-def render_table_details():
+@app.route("/tableformat", defaults={'tablename':'basedata_supplierquotes_table'}, methods=['GET', 'POST'])
+@app.route("/tableformat/<tablename>", methods=['GET', 'POST'])
+def render_table_details_w_tablename(tablename):
     cursor = connection.cursor()  # print some of the newly added table's details
-    postgreSQL_select_Query = "select * from {} order by product".format("basedata_supplierquotes_table")
+    postgreSQL_select_Query = "select * from {0}".format(tablename)
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("tableformat.html", output_data = data)
+    return render_template("tableformat.html", output_data=data)
 
 @app.route("/review_instructions", methods=['GET', 'POST'])
 def review_instructions():

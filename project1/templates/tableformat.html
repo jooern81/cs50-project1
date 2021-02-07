@@ -34,7 +34,8 @@ White: #FFFFFF
 
 <div class="row" id="wrapper">
     <div class="taskNav col-sm-3">
-        <a href="#quarterlyreports" type="button">
+
+        <a href="/tableformat/basedata_supplierquotes_table" type="button">
             <div class="navIcon col-sm-3" id="imgQuarterly">
                 <img class="taskNavImg" src="{{ url_for('static', filename='images/report.png') }}" alt="report">
             </div>
@@ -44,7 +45,7 @@ White: #FFFFFF
             </div>
         </a>
 
-        <a href="#forecast" type="button">
+        <a href="/tableformat/basedata_demandforecast_table" type="button">
             <div class="navIcon col-sm-3" id="imgForecasts">
                 <img class="taskNavImg" src="{{ url_for('static', filename='images/sales.png') }}" alt="forecast">
             </div>
@@ -86,23 +87,16 @@ White: #FFFFFF
 
     </div>
 
-    <div class="graphContainer col-sm-9">
-        <div class="col-sm-6">
-            <h5 id="qtrReportView">Select report to review</h5>
-        </div>
-
-        <div class="col-sm-6" id="qtrReportItems">
-            <h5 class="col-sm-4">Profitability</h5>
-            <h5 class="col-sm-4">Sales</h5>
-            <h5 class="col-sm-4">Inventory</h5>
-        </div>
-        <div class="col-sm-12">
-            {% include 'basedata_supplierquote_table.html' %}
-        </div>
-
+    <div class="graphContainer col-sm-8">
+        {% include 'basedata_supplierquote_table.html' %}
     </div>
 
 </div>
+
+<script>
+function buttonswap() {
+}
+</script>
 
 </body>
 </html>

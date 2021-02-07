@@ -1,24 +1,36 @@
 <!doctype html>
-<h4>Supplier Quotes</h4>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Product</th>
-        <th scope="col">Setup Costs (Express)</th>
-        <th scope="col">Annual Holding Cost</th>
-        <th scope="col">Lead Time (Express)</th>
-        <th scope="col">Supplier Name</th>
-      </tr>
-    </thead>
-      <tbody>
-      {% for row in output_data: %}
+
+<div class="col-sm-6">
+    <h5 id="qtrReportView">Select report to review</h5>
+</div>
+
+<div class="col-sm-6" id="qtrReportItems">
+    <h5 class="col-sm-4">Profitability</h5>
+    <h5 class="col-sm-4">Sales</h5>
+    <h5 class="col-sm-4">Inventory</h5>
+</div>
+<div class="col-sm-12">
+  <h1>Supplier Quotes</h1>
+    <table class="table">
+      <thead>
         <tr>
-          <td>{{row[1]}}</td>
-          <td>{{row[2]}}</td>
-          <td>{{row[3]}}</td>
-          <td>{{row[4]}}</td>
-          <td>{{row[5]}}</td>
+          <th scope="col">Product</th>
+          <th scope="col">Setup Costs (Express)</th>
+          <th scope="col">Annual Holding Cost</th>
+          <th scope="col">Lead Time (Express)</th>
+          <th scope="col">Supplier Name</th>
         </tr>
-      {% endfor %}
-      </tbody>
-  </table>
+      </thead>
+        <tbody>
+        {% for row in output_data: %}
+          <tr>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

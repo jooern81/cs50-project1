@@ -1,0 +1,26 @@
+<!doctype html>
+<div class="col-sm-12">
+  <h1>Demand Forecast Table</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Setup Costs (Express)</th>
+          <th scope="col">Annual Holding Cost</th>
+          <th scope="col">Lead Time (Express)</th>
+          <th scope="col">Supplier Name</th>
+        </tr>
+      </thead>
+        <tbody>
+        {% for row in output_data: %}
+          <tr>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
