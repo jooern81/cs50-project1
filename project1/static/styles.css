@@ -34,7 +34,7 @@ margin: 0 auto;
 
 .gameNav {
   background-color:black;
-  color: black
+  color: #996600;
 }
 
 .gameNav a {
@@ -52,7 +52,7 @@ margin: 0 auto;
 }
 
 .middlePortion {
-    align-content: left;
+    text-align: center;
 }
 
 .taskNavImg {
