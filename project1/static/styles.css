@@ -1,3 +1,11 @@
+/* Use these colors only:
+Green: #116530
+Neon Green: #A3EBB1
+Blue Green: #21B6A8
+Black: #000000
+White: #FFFFFF
+*/
+
 * {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -44,6 +52,17 @@ margin: 0 auto;
   text-decoration: none;
   font-size: 18px;
   border-right: 1px solid #000;
+}
+
+.qtrNav {
+  text-align: right;
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+.qtrNav a {
+  float: left;
+  text-align: centre;
 }
 
 #selected {

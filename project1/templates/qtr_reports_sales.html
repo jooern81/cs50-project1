@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Project Supermarket</title>
+    <link  href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="topNav col-xs-12">
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
+    <div class="middlePortion col-xs-10">
+        <a href="/qtr_reports_profitability">Warm Price Supermarket</a>
+        <a href="/instructions_background">Review Instructions</a>
+        <a href="#contact">Current Standing</a>
+        <a href="#about">Round 6-22</a>
+    </div>
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:right">account_circle</i></a>
+</div>
+
+<div class="row" id="wrapper">
+    <div class="taskNav col-sm-3">
+        <a href="/qtr_reports_profitability" type="button">
+            <div class="navIcon col-sm-3" id="imgQuarterly">
+                <img class="taskNavImg" src="{{ url_for('static', filename='images/report.png') }}" alt="report">
+            </div>
+            <div class = "clearFix col-sm-9" id="wdsQuarterly">
+                <h4>Qtr' Reports</h4>
+                <h6>Review all previously generated quarterly reports</h6>
+            </div>
+        </a>
+
+        <a href="/forecasts" type="button">
+            <div class="navIcon col-sm-3" id="imgForecasts">
+                <img class="taskNavImg" src="{{ url_for('static', filename='images/sales.png') }}" alt="forecast">
+            </div>
+            <div href="#quarterlyreport2" class="clearFix col-sm-9" id="wdsForecasts">
+                <h4>Forecasts</h4>
+                <h6>View demand forecasts made for each product</h6>
+            </div>
+        </a>
+
+        <a href="/supplier_quotes" type="button">
+            <div class="navIcon col-sm-3" id="imgSupplier">
+                <img class="taskNavImg" src="{{ url_for('static', filename='images/bill.png') }}" alt="invoice">
+            </div>
+            <div class = "clearFix col-sm-9" id="wdsSupplier">
+                <h4>Supplier Quotes</h4>
+                <h6>Unit, setup, and holding costs for SKUs this quarter</h6>
+            </div>
+        </a>
+
+        <a href="/news_and_events" type="button">
+            <div class="navIcon col-sm-3" id="imgNews">
+                <img class="taskNavImg" src="{{ url_for('static', filename='images/newspaper.png') }}" alt="news">
+            </div>
+            <div class = "clearFix col-sm-9" id="wdsNews">
+                <h4>News & Events</h4>
+                <h6>News and announcements for the quarter</h6>
+            </div>
+        </a>
+
+        <a href="#reviewandrestock" type="button">
+            <div class="navIcon col-sm-3" id="imgReview">
+                <img src="{{ url_for('static', filename='images/box.png') }}" class="taskNavImg" alt="restock">
+            </div>
+            <div class = "clearFix col-sm-9" id="wdsReview">
+                <h4>Review & Restock</h4>
+                <h6>Review inventory levels and update restock sheet</h6>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="graphContainer col-sm-9">
+
+        <div class="col-sm-12 qtrNav" id="qtrReportItems">
+            <h5 id="qtrReportView">Select report to review</h5>
+            <a href="/qtr_reports_profitability" class="col-sm-4"> Profitability</a>
+            <a href="/qtr_reports_sales" class="col-sm-4">Sales</a>
+            <a href="/qtr_reports_inventory" class="col-sm-4">Inventory</a>
+        </div>
+
+        <div class="col-sm-12">
+            <h4> Sales Reports </h4>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
