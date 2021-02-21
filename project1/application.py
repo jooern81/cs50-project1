@@ -156,6 +156,10 @@ def instructions_background():
 def instructions_gameplay():
     return render_template("instructions_gameplay.html")
 
+@app.route("/instructions_qtr_reports", methods=['GET', 'POST'])
+def instructions_qtr_reports():
+    return render_template("instructions_qtr_reports.html")
+
 @app.route("/instructions_review_and_restock", methods=['GET', 'POST'])
 def instructions_review_and_restock():
     return render_template("instructions_review_and_restock.html")

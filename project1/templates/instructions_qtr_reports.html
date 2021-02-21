@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Project Supermarket</title>
+    <link  href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="topNav col-xs-12">
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
+    <div class="middlePortion col-xs-10">
+        <a href="/qtr_reports_profitability">Warm Price Supermarket</a>
+        <a href="/instructions_background">Review Instructions</a>
+        <a href="#contact">Current Standing</a>
+        <a href="#about">Round 6-20</a>
+    </div>
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:right">account_circle</i></a>
+</div>
+
+
+<div class="row" id="wrapper">
+    <div class= "col-sm-10">
+        <div class="instructionNav">
+            <a href="/instructions_background">Background</a>
+            <a href="/instructions_gameplay">Gameplay</a>
+            <a id="selected" href="/instructions_qtr_reports">Quarterly Reports</a>
+            <a href="/instructions_supply_and_demand">Supply & Demand</a>
+            <a href="/instructions_review_and_restock">Review & Restock</a>
+        </div>
+
+        <div>
+            <p> The Quarterly reports tab provides you with information reflecting past performance.
+                They are broken into quarters & consists of the following datasets:
+                <br><br>
+
+                <strong> Profitability Report </strong> - quarterly bottom line numbers which include details on: </p>
+                <li> <strong> Revenue From Sales </strong> - actual revenue generated from sales in each quarter. </li>
+                <li> <strong> Restock Setup Expense </strong> - actual expenses for setting up restocks.</li>
+                <li> <strong> Restock Unit Expense </strong> - actual expenses for purchasing inventory. </li>
+                <li> <strong> Inventory Holding Costs </strong> - actual expenses on inventory holding. </li>
+                <li> <strong> Operational P&L </strong> quarterly profitability.</li>
+            <br><br>
+            <p> <strong> Sales Report  </strong> - a table summary of sales performance for the respective quarter with values of: </p>
+                <li> <strong> Unit Sales  </strong> - reflects the unit count of each product sold for the respective quarter. </li>
+                <li> <strong> Estimated Missed Sales </strong> - reflects forecasted (but not necessarily actual) demand which was not met over the quarter due to situations of stockout.</li>
+            <br><br>
+            <p> <strong> Inventory Report  </strong> - overview of inventory holdings per quarter, split by: </p>
+                <li> <strong> Starting Inventory  </strong> - inventory in stock for each product at quarters' start. </li>
+                <li> <strong> Ending Inventory </strong> - inventory in stock for each product at quarters' end.</li>
+            <br><br>
+            <p> *Operational P&L values of other players may be viewed during play-through but other datasets may only be viewed at the end of the game.
+                Be sure to review how others managed their Supermarkets at the end of the game to improve your skills in Operations Management.
+            </p>
+        </div>
+    </div>
+
+    <div class="designSideBar col-sm-2">
+        <img id="designSideBar" src="{{ url_for('static', filename='guide_and_rules/designBarSide.png') }}" alt="report">
+    </div>
+</div>
+</body>
+
+</html>
