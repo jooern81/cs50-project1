@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Project Supermarket</title>
+    <link  href="{{ url_for('static', filename='styles.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+<div class="topNav col-xs-12">
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:left">menu</i></a>
+    <div class="middlePortion col-xs-10">
+        <a href="#home">Warm Price Supermarket</a>
+        <a href="#news">Review Instructions</a>
+        <a href="#contact">Current Standing</a>
+        <a href="#about">Round 6-20</a>
+    </div>
+    <a href="#addLink"><i class="material-icons" style="font-size:30px;float:right">account_circle</i></a>
+</div>
+
+
+<div class="row" id="wrapper">
+    <div class= "col-sm-10">
+        <div class="instructionNav">
+            <a href="#home">Background</a>
+            <a href="#news">Gameplay</a>
+            <a id="selected" href="#contact">Supply & Demand Panels</a>
+            <a href="#about">Review & Restock Panel</a>
+        </div>
+
+        <div>
+            <p> <strong>Demand Forecasts</strong>
+                Are unit demand estimates for each product broken into quarters. They are provided at the start of each year and may not be completely
+                representative of demand conditions due to unforeseen events and regular variability of demand - which tends to fall within a 5% margin
+                of error on a daily basis.
+                <strong>Supplier Quotes</strong> Are provided to you by suppliers on an annual basis. The quotations provide visibility over each products'
+                    <li>Selling price</li>
+                    <li>Unit cost</li>
+                    <li>Delivery truckload (setup) cost</li>
+                    <li>Annual per-unit inventory holding cost</li>
+                    <li>Delivery lead time</li>
+                    <li>Max truckload unit limit</li>
+                <strong>News & Events</strong>
+                Are random and unforeseen occurrences that may affect either demand or supply conditions, and are not accounted for by demand forecasts and
+                supplier quotations at the start of each year. Luckily, your team of experienced operations specialists tend to provide a projected impact
+                summary whenever such events occur.
+            </p>
+        </div>
+    </div>
+
+    <div class="designSideBar col-sm-2">
+        <img id="designSideBar" src="{{ url_for('static', filename='guide_and_rules/designBarSide.png') }}" alt="report">
+    </div>
+</div>
+</body>
+
+</html>

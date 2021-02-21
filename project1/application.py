@@ -126,9 +126,45 @@ def render_table_details_w_tablename(tablename):
     cursor.close()
     return render_template("tableformat.html", output_data=data)
 
-@app.route("/review_instructions", methods=['GET', 'POST'])
-def review_instructions():
-    return render_template("review_instructions.html")
+@app.route("/qtr_reports_profitability", methods=['GET', 'POST'])
+def qtr_reports_profitability():
+    return render_template("qtr_reports_profitability.html")
+
+@app.route("/qtr_reports_sales", methods=['GET', 'POST'])
+def qtr_reports_sales():
+    return render_template("qtr_reports_sales.html")
+
+@app.route("/qtr_reports_inventory", methods=['GET', 'POST'])
+def qtr_reports_inventory():
+    return render_template("qtr_reports_inventory.html")
+
+@app.route("/forecasts", methods=['GET', 'POST'])
+def forecasts():
+    return render_template("forecasts.html")
+
+@app.route("/supplier_quotes", methods=['GET', 'POST'])
+def supplier_quotes():
+    return render_template("supplier_quotes.html")
+
+@app.route("/news_and_events", methods=['GET', 'POST'])
+def news_and_events():
+    return render_template("news_and_events.html")
+
+@app.route("/instructions_background", methods=['GET', 'POST'])
+def instructions_background():
+    return render_template("instructions_background.html")
+
+@app.route("/instructions_gameplay", methods=['GET', 'POST'])
+def instructions_gameplay():
+    return render_template("instructions_gameplay.html")
+
+@app.route("/instructions_review_and_restock", methods=['GET', 'POST'])
+def instructions_review_and_restock():
+    return render_template("instructions_review_and_restock.html")
+
+@app.route("/instructions_supply_and_demand", methods=['GET', 'POST'])
+def instructions_supply_and_demand():
+    return render_template("instructions_supply_and_demand.html")
 
 @app.route("/logout")
 def logout():
