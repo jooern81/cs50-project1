@@ -30,6 +30,27 @@ margin: 0 auto;
   font-size: 18px;
 }
 
+.instructionNav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.instructionNav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  border-right: 1px solid #000;
+}
+
+#selected {
+  font-weight: bold;
+  font-color: #FFFFFF;
+}
+
 .topNav a:hover {
   background-color: #ffcc66;
   color: black;
@@ -110,8 +131,8 @@ text-align: right;
 }
 
 p {
-font-size: 22px;
+font-size: 20px;
 }
 li {
-font-size: 22px;
+font-size: 20px;
 }
