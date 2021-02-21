@@ -1,0 +1,25 @@
+<!doctype html>
+
+<div class="col-sm-12">
+  <h1>News and Events</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Headline</th>
+          <th scope="col">Type</th>
+          <th scope="col">Effects</th>
+          <th scope="col">Article</th>
+        </tr>
+      </thead>
+        <tbody>
+        {% for row in output_data: %}
+          <tr>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

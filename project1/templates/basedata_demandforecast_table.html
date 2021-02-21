@@ -1,14 +1,22 @@
 <!doctype html>
 <div class="col-sm-12">
-  <h1>Demand Forecast Table</h1>
+  <h1>Forecasts</h1>
     <table class="table">
       <thead>
         <tr>
           <th scope="col">Product</th>
-          <th scope="col">Setup Costs (Express)</th>
-          <th scope="col">Annual Holding Cost</th>
-          <th scope="col">Lead Time (Express)</th>
-          <th scope="col">Supplier Name</th>
+          <th scope="col">Y1Q1</th>
+          <th scope="col">Y1Q2</th>
+          <th scope="col">Y1Q3</th>
+          <th scope="col">Y1Q4</th>
+          <th scope="col">Y2Q1</th>
+          <th scope="col">Y2Q2</th>
+          <th scope="col">Y2Q3</th>
+          <th scope="col">Y2Q4</th>
+          <th scope="col">Y3Q1</th>
+          <th scope="col">Y3Q2</th>
+          <th scope="col">Y3Q3</th>
+          <th scope="col">Y3Q4</th>
         </tr>
       </thead>
         <tbody>
@@ -19,6 +27,14 @@
             <td>{{row[3]}}</td>
             <td>{{row[4]}}</td>
             <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+            <td>{{row[8]}}</td>
+            <td>{{row[9]}}</td>
+            <td>{{row[10]}}</td>
+            <td>{{row[11]}}</td>
+            <td>{{row[12]}}</td>
+            <td>{{row[13]}}</td>
           </tr>
         {% endfor %}
         </tbody>

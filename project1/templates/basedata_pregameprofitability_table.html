@@ -4,15 +4,13 @@
     <h5 id="qtrReportView">Select report to review</h5>
 </div>
 <div class="col-sm-12">
-  <h1>Supplier Quotes</h1>
+  <h1>Profitability Reports</h1>
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">Product</th>
-          <th scope="col">Setup Costs (Express)</th>
-          <th scope="col">Annual Holding Cost</th>
-          <th scope="col">Lead Time (Express)</th>
-          <th scope="col">Supplier Name</th>
+          <th scope="col">Item</th>
+          <th scope="col">Q4 2020</th>
+          <th scope="col">Q3 2020</th>
         </tr>
       </thead>
         <tbody>
@@ -21,8 +19,6 @@
             <td>{{row[1]}}</td>
             <td>{{row[2]}}</td>
             <td>{{row[3]}}</td>
-            <td>{{row[4]}}</td>
-            <td>{{row[5]}}</td>
           </tr>
         {% endfor %}
         </tbody>

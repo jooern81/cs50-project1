@@ -116,38 +116,60 @@ def login():
     return render_template('login.html', error=error)
 
 
-@app.route("/tableformat", defaults={'tablename':'basedata_supplierquotes_table'}, methods=['GET', 'POST'])
-@app.route("/tableformat/<tablename>", methods=['GET', 'POST'])
+@app.route("/supplier_quotes", defaults={'tablename':'basedata_supplierquotes_table'}, methods=['GET', 'POST'])
+@app.route("/supplier_quotes/<tablename>", methods=['GET', 'POST'])
 def render_table_details_w_tablename(tablename):
     cursor = connection.cursor()  # print some of the newly added table's details
     postgreSQL_select_Query = "select * from {0}".format(tablename)
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("tableformat.html", output_data=data)
+    return render_template("supplier_quotes.html", output_data=data)
 
-@app.route("/qtr_reports_profitability", methods=['GET', 'POST'])
-def qtr_reports_profitability():
+@app.route("/qtr_reports_profitability",defaults={'tablename':'basedata_pregameprofitability_table'},  methods=['GET', 'POST'])
+def qtr_reports_profitability(tablename):
+    cursor = connection.cursor()  # print some of the newly added table's details
+    postgreSQL_select_Query = "select * from {0}".format(tablename)
+    cursor.execute(postgreSQL_select_Query)
+    data = cursor.fetchall()
+    cursor.close()
     return render_template("qtr_reports_profitability.html")
 
-@app.route("/qtr_reports_sales", methods=['GET', 'POST'])
-def qtr_reports_sales():
+@app.route("/qtr_reports_sales",defaults={'tablename':'basedata_pregamedemand_table'},  methods=['GET', 'POST'])
+def qtr_reports_sales(tablename):
+    cursor = connection.cursor()  # print some of the newly added table's details
+    postgreSQL_select_Query = "select * from {0}".format(tablename)
+    cursor.execute(postgreSQL_select_Query)
+    data = cursor.fetchall()
+    cursor.close()
     return render_template("qtr_reports_sales.html")
 
-@app.route("/qtr_reports_inventory", methods=['GET', 'POST'])
-def qtr_reports_inventory():
+@app.route("/qtr_reports_inventory", defaults={'tablename':'basedata_pregamedemand_table'}, methods=['GET', 'POST'])
+# TO INSERT HTML EXTENSION FILE
+def qtr_reports_inventory(tablename):
+    cursor = connection.cursor()  # print some of the newly added table's details
+    postgreSQL_select_Query = "select * from {0}".format(tablename)
+    cursor.execute(postgreSQL_select_Query)
+    data = cursor.fetchall()
+    cursor.close()
     return render_template("qtr_reports_inventory.html")
 
-@app.route("/forecasts", methods=['GET', 'POST'])
-def forecasts():
+@app.route("/forecasts",defaults={'tablename':'basedata_demandforecast_table'}, methods=['GET', 'POST'])
+def forecasts(tablename):
+    cursor = connection.cursor()  # print some of the newly added table's details
+    postgreSQL_select_Query = "select * from {0}".format(tablename)
+    cursor.execute(postgreSQL_select_Query)
+    data = cursor.fetchall()
+    cursor.close()
     return render_template("forecasts.html")
 
-@app.route("/supplier_quotes", methods=['GET', 'POST'])
-def supplier_quotes():
-    return render_template("supplier_quotes.html")
-
-@app.route("/news_and_events", methods=['GET', 'POST'])
-def news_and_events():
+@app.route("/news_and_events", defaults={'tablename':'basedata_newsandevents_table'},  methods=['GET', 'POST'])
+def news_and_events(tablename):
+    cursor = connection.cursor()  # print some of the newly added table's details
+    postgreSQL_select_Query = "select * from {0}}".format(tablename)
+    cursor.execute(postgreSQL_select_Query)
+    data = cursor.fetchall()
+    cursor.close()
     return render_template("news_and_events.html")
 
 @app.route("/instructions_background", methods=['GET', 'POST'])
