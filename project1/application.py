@@ -133,7 +133,7 @@ def qtr_reports_profitability(tablename):
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("qtr_reports_profitability.html")
+    return render_template("qtr_reports_profitability.html", output_data=data)
 
 @app.route("/qtr_reports_sales",defaults={'tablename':'basedata_pregamedemand_table'},  methods=['GET', 'POST'])
 def qtr_reports_sales(tablename):
@@ -142,7 +142,7 @@ def qtr_reports_sales(tablename):
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("qtr_reports_sales.html")
+    return render_template("qtr_reports_sales.html", output_data=data)
 
 @app.route("/qtr_reports_inventory", defaults={'tablename':'basedata_pregamedemand_table'}, methods=['GET', 'POST'])
 # TO INSERT HTML EXTENSION FILE
@@ -152,16 +152,16 @@ def qtr_reports_inventory(tablename):
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("qtr_reports_inventory.html")
+    return render_template("qtr_reports_inventory.html", output_data=data)
 
-@app.route("/forecasts",defaults={'tablename':'basedata_demandforecast_table'}, methods=['GET', 'POST'])
+@app.route("/forecasts",defaults={'tablename':'asedata_demandforecast_table'}, methods=['GET', 'POST'])
 def forecasts(tablename):
     cursor = connection.cursor()  # print some of the newly added table's details
     postgreSQL_select_Query = "select * from {0}".format(tablename)
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("forecasts.html")
+    return render_template("forecasts.html", output_data=data)
 
 @app.route("/news_and_events", defaults={'tablename':'basedata_newsandevents_table'},  methods=['GET', 'POST'])
 def news_and_events(tablename):
@@ -170,7 +170,7 @@ def news_and_events(tablename):
     cursor.execute(postgreSQL_select_Query)
     data = cursor.fetchall()
     cursor.close()
-    return render_template("news_and_events.html")
+    return render_template("news_and_events.html", output_data=data)
 
 @app.route("/instructions_background", methods=['GET', 'POST'])
 def instructions_background():
